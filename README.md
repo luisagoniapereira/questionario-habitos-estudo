@@ -32,3 +32,25 @@ Transferência direta do ficheiro:
 Ou clona este repositório:
 ```bash
 git clone https://github.com/luisagoniapereira/questionario-habitos-estudo.git
+📖 Como citar
+
+Se utilizares este dataset, cita assim:
+
+Questionário Limpo. (2025). Dados de hábitos de estudo dos estudantes da Universidade Atlântica [conjunto de dados]. GitHub.
+https://raw.githubusercontent.com/luisagoniapereira/questionario-habitos-estudo/main/Questionario_Limpo.xlsx
+
+Se citares o artigo associado ao dataset, usa:
+
+Mendes, A., Pereira, L. A., & Vairinhos, V. (2025). Entre o Presencial e o Online: Análise dos Hábitos de Estudo e a Possibilidade de um Modelo Híbrido. Universidade Atlântica.
+
+📜 Licença
+
+Este dataset é disponibilizado sob CC BY-NC 4.0.
+Podes usar e adaptar para fins não comerciais, com atribuição aos autores.
+Mais informação: https://creativecommons.org/licenses/by-nc/4.0/
+
+📬 Contactos
+
+Autor de correspondência: Luís Agonia Pereira — luis.pereira@esce.ips.pt
+
+Issues e pedidos: usar a aba Issues deste repositório.
