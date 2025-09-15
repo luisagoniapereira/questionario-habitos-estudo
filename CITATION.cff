@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Se usar este dataset, por favor cite-o como descrito abaixo."
+title: "Questionário Limpo - Hábitos de Estudo (Universidade Atlântica)"
+version: "1.0.0"
+doi: "10.5281/zenodo.xxxxxxx"
+authors:
+  - family-names: "Mendes"
+    given-names: "Ana"
+    affiliation: "Instituto Politécnico de Setúbal, Setúbal, Portugal"
+  - family-names: "Agonia Pereira"
+    given-names: "Luís"
+    affiliation: "Instituto Politécnico de Setúbal, Setúbal, Portugal"
+  - family-names: "Vairinhos"
+    given-names: "Valter"
+    affiliation: "Universidade de Aveiro, Aveiro, Portugal"
+date-released: "2025-09-15"
+license: "CC-BY-NC-4.0"
+repository-code: "https://github.com/luisagoniapereira/questionario-habitos-estudo"
+keywords:
+  - dataset
+  - hábitos de estudo
+  - ensino híbrido
+  - Universidade Atlântica
+  - educação superior
