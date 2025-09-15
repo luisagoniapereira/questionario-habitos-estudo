@@ -1,56 +1,29 @@
-# Questionário Limpo — Dados de Hábitos de Estudo (Universidade Atlântica)
+# Questionário Limpo - Hábitos de Estudo (Universidade Atlântica)
 
-## Autores do estudo
-Ana Mendes¹, Luís Agonia Pereira¹, Valter Vairinhos³
+Este repositório contém o **dataset final (limpo)** utilizado no estudo *"Entre o Presencial e o Online: Análise dos Hábitos de Estudo e a Possibilidade de um Modelo Híbrido"*, realizado com estudantes da Universidade Atlântica (Oeiras, Portugal).  
+O objetivo do estudo foi compreender hábitos de estudo, preferências de aprendizagem e perceções sobre a viabilidade de um **modelo híbrido de ensino**.
 
-¹ Instituto Politécnico de Setúbal, Setúbal, Portugal  
-³ ICLab – ICAA – Intellectual Capital Association, Santarém, Portugal; CINAV – Naval Research Centre – Escola Naval, Almada, Portugal
+> **Nota ética:** Todos os dados foram anonimizados e tratados de forma a garantir a confidencialidade dos participantes. Este repositório contém apenas a base limpa, sem identificadores pessoais.
 
 ---
 
-Este repositório contém a base de dados limpa (*Questionário Limpo*) utilizada no estudo apresentado no artigo:
+## 📂 Estrutura do repositório
 
-> **Mendes, A., Pereira, L. A., & Vairinhos, V. (2025).** *Entre o Presencial e o Online: Análise dos Hábitos de Estudo e a Possibilidade de um Modelo Híbrido*. Universidade Atlântica.
+| Ficheiro | Descrição |
+|----------|------------|
+| `Questionario_Limpo.xlsx` | Base de dados final limpa, pronta para análise. |
+| `CODEBOOK.md` *(em breve)* | Dicionário de dados: descrição de todas as variáveis, escalas e codificação. |
+| `LICENSE` | Texto completo da licença **CC BY-NC 4.0**. |
+| `CITATION.cff` | Informação estruturada para citação do repositório. |
 
-## 📂 Descrição do dataset
-O ficheiro `Questionario_Limpo.xlsx` contém respostas de **69 estudantes** da Universidade Atlântica, recolhidas em 2025.  
-O objetivo do questionário foi analisar hábitos de estudo, estratégias académicas, bem-estar físico/mental e perceções sobre **modelos híbridos de ensino**.
+---
 
-- **Formato:** Excel (.xlsx)  
-- **Registos válidos:** 69 (após limpeza)  
-- **Variáveis originais:** 66  
-- **Escala de resposta:** Likert 1–5 (1 = Discordo totalmente; 5 = Concordo totalmente)
+## 🔗 Acesso rápido ao dataset
 
-> ⚠️ **Nota ética**  
-> Todos os dados foram anonimizados em conformidade com a Declaração de Helsínquia.  
-> O dataset é disponibilizado apenas para fins académicos e de investigação. Não contém identificadores pessoais.
+Para carregar o ficheiro diretamente no **Python (Pandas)**:
 
-## 📥 Download
-Transferência direta do ficheiro:  
-[**Download Questionário Limpo (Excel)**](https://raw.githubusercontent.com/luisagoniapereira/questionario-habitos-estudo/main/Questionario_Limpo.xlsx)
-
-Ou clona este repositório:
-```bash
-git clone https://github.com/luisagoniapereira/questionario-habitos-estudo.git
-📖 Como citar
-
-Se utilizares este dataset, cita assim:
-
-Questionário Limpo. (2025). Dados de hábitos de estudo dos estudantes da Universidade Atlântica [conjunto de dados]. GitHub.
-https://raw.githubusercontent.com/luisagoniapereira/questionario-habitos-estudo/main/Questionario_Limpo.xlsx
-
-Se citares o artigo associado ao dataset, usa:
-
-Mendes, A., Pereira, L. A., & Vairinhos, V. (2025). Entre o Presencial e o Online: Análise dos Hábitos de Estudo e a Possibilidade de um Modelo Híbrido. Universidade Atlântica.
-
-📜 Licença
-
-Este dataset é disponibilizado sob CC BY-NC 4.0.
-Podes usar e adaptar para fins não comerciais, com atribuição aos autores.
-Mais informação: https://creativecommons.org/licenses/by-nc/4.0/
-
-📬 Contactos
-
-Autor de correspondência: Luís Agonia Pereira — luis.pereira@esce.ips.pt
-
-Issues e pedidos: usar a aba Issues deste repositório.
+```python
+import pandas as pd
+url = "https://raw.githubusercontent.com/luisagoniapereira/questionario-habitos-estudo/main/Questionario_Limpo.xlsx"
+df = pd.read_excel(url, sheet_name=0, header=1)
+df.head()
