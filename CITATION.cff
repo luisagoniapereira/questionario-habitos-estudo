@@ -12,7 +12,9 @@ authors:
     affiliation: "Instituto Politécnico de Setúbal, Setúbal, Portugal"
   - family-names: "Vairinhos"
     given-names: "Valter"
-    affiliation: "ICLab - ICAA - Intellectual Capital Association, Santarém, Portugal, & CINAV - Naval Research Centre - Escola Naval, Almada, Portugal"
+    affiliation: 
+      - "Intellectual Capital Association, Santarém, Portugal"
+      - "CINAV - Naval Research Centre - Escola Naval, Almada, Portugal"
 date-released: "2025-09-15"
 license: "CC-BY-NC-4.0"
 repository-code: "https://github.com/luisagoniapereira/questionario-habitos-estudo"
