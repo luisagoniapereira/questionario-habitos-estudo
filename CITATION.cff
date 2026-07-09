@@ -1,7 +1,7 @@
 cff-version: 1.2.0
-message: "Se usar este dataset, por favor cite-o como descrito abaixo."
-title: "Questionário Limpo - Hábitos de Estudo (Universidade Atlântica)"
-version: "1.0.1"
+message: "If you use this dataset or code, please cite it as below."
+title: "Study habits of students at Universidade Atlântica"
+version: "1.1.0"
 doi: "10.5281/zenodo.17127602"
 authors:
   - family-names: "Mendes"
@@ -12,15 +12,14 @@ authors:
     affiliation: "Instituto Politécnico de Setúbal, Setúbal, Portugal"
   - family-names: "Vairinhos"
     given-names: "Valter"
-    affiliation: 
-      - "ICLab-ICAA - Intellectual Capital Association, Santarém, Portugal"
-      - "CINAV - Naval Research Centre - Escola Naval, Almada, Portugal"
-date-released: "2025-09-15"
+    affiliation: "ICLab-ICAA - Intellectual Capital Association, Santarém, Portugal; CINAV - Naval Research Centre - Escola Naval, Almada, Portugal"
+    orcid: "https://orcid.org/0000-0001-9390-5340"
+date-released: "2026-07-09"
 license: "CC-BY-NC-4.0"
 repository-code: "https://github.com/luisagoniapereira/questionario-habitos-estudo"
 keywords:
   - dataset
-  - hábitos de estudo
-  - ensino híbrido
-  - Universidade Atlântica
-  - educação superior
+  - study habits
+  - hybrid learning
+  - higher education
+  - reproducible research

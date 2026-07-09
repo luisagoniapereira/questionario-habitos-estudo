@@ -1,8 +1,9 @@
 # Reprodução das análises quantitativas
 
-Materiais de reprodutibilidade do estudo **"Student Engagement in Hybrid
-Higher Education: An Exploratory Institutional Case Study"** (Universidade
-Atlântica, n = 69).
+Materiais de reprodutibilidade de um estudo sobre hábitos de estudo,
+autorregulação e bem-estar no ensino superior híbrido (Universidade
+Atlântica, n = 69). O artigo associado está em revisão; a referência
+completa será acrescentada após a aceitação.
 
 Este pacote contém o conjunto de dados e um programa em Python que reproduz,
 do princípio ao fim, todas as análises descritas no artigo.
@@ -143,9 +144,9 @@ número de opções digitais selecionadas a dividir por cinco.
 
 **Conjunto de dados e código (este registo):**
 
-> Pereira, L. A. G. (2025). *Questionário sobre hábitos de estudo — dados e
-> código de reprodução* [Data set e software]. Zenodo.
-> https://doi.org/10.5281/zenodo.17127602
+> Mendes, A., Agonia Pereira, L., & Vairinhos, V. (2026). *Study habits of
+> students at Universidade Atlântica* (Version 1.1.0) [Data set and
+> software]. Zenodo. https://doi.org/10.5281/zenodo.17127602
 
 O DOI `10.5281/zenodo.17127602` é o *concept DOI*: aponta sempre para a versão
 mais recente do registo. Cada versão tem também o seu próprio DOI específico,

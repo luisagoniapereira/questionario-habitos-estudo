@@ -1,0 +1,59 @@
+INSTRUCOES: atualizar o GitHub e o Zenodo (4 passos)
+=====================================================
+
+Esta pasta contem TUDO o que deve ficar no repositorio GitHub
+(luisagoniapereira/questionario-habitos-estudo):
+
+   README.md              (novo, em ingles)
+   README_PT.md           (novo, em portugues)
+   CITATION.cff           (novo, versao 1.1.0)
+   reproducao_analise.py  (novo, reproduz todas as analises)
+   Questionario_Limpo.xlsx (igual ao que ja la esta)
+   requirements.txt       (novo)
+   zenodo.json            (novo - ver passo 2!)
+
+PASSO 1 - Carregar os ficheiros
+  No GitHub, no repositorio, botao "Add file" > "Upload files".
+  Arrasta para la os 7 ficheiros desta pasta (todos menos este LEIA-ME).
+  Mensagem de commit: v1.1.0 - full reproduction package
+  Botao "Commit changes". Os que tem o mesmo nome sao substituidos.
+
+PASSO 2 - Renomear zenodo.json para .zenodo.json (ponto no inicio)
+  No GitHub, abre o ficheiro zenodo.json > icone do lapis (Edit) >
+  no campo do nome, muda "zenodo.json" para ".zenodo.json" >
+  "Commit changes".
+  (Este ficheiro faz o Zenodo preencher sozinho titulo, autores,
+  afiliacoes e ORCID na nova versao.)
+
+PASSO 3 - Criar a release
+  "Releases" (coluna direita) > "Draft a new release"
+  - "Choose a tag": escrever exatamente  v1.1.0  > "Create new tag"
+  - "Release title":
+      v1.1.0 - Full reproduction package (quantitative and lexical analyses)
+  - "Description": copiar o texto no fim deste ficheiro.
+  - Botao verde "Publish release".
+
+PASSO 4 - Verificar no Zenodo (5 minutos depois)
+  Abrir https://zenodo.org/records/17127602
+  Deve mostrar a versao v1.1.0, o titulo
+  "Study habits of students at Universidade Atlantica" e os 3 autores.
+  Se nao aparecer: zenodo.org > Settings > GitHub > "Sync now".
+  O DOI de conceito 10.5281/zenodo.17127602 mantem-se igual.
+
+-----------------------------------------------------
+TEXTO PARA A DESCRIPTION DA RELEASE (copiar tal e qual):
+-----------------------------------------------------
+This release updates the reproducibility package.
+
+Changes since v1.0.1:
+- reproducao_analise.py now reproduces ALL results of the associated
+  article, including the lexical analysis of open-ended responses,
+  with a fixed random seed (RANDOM_STATE = 42) and an explicit
+  bootstrap procedure.
+- requirements.txt added, with the exact library versions used to
+  verify the results (Python 3.10.12).
+- README.md rewritten in English (Portuguese version kept as
+  README_PT.md), documenting the full composition of the composite
+  indices.
+- CITATION.cff and .zenodo.json updated (version 1.1.0, English
+  title, all three authors).

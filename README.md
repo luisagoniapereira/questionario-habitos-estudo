@@ -1,8 +1,9 @@
 # Reproduction of the analyses
 
-Reproducibility materials for the study **"Student Engagement in Hybrid
-Higher Education: An Exploratory Institutional Case Study"** (Universidade
-Atlantica, n = 69).
+Reproducibility materials for a study of study habits, self-regulation and
+well-being in hybrid higher education (Universidade Atlantica, n = 69). The
+associated article is currently under review; its full reference will be
+added here upon acceptance.
 
 This package contains the dataset and a Python program that reproduces,
 from start to finish, all the analyses reported in the article.
@@ -143,9 +144,9 @@ selected divided by five.
 
 **Dataset and code (this record):**
 
-> Pereira, L. A. G. (2025). *Study habits questionnaire - data and
-> reproduction code* [Data set and software]. Zenodo.
-> https://doi.org/10.5281/zenodo.17127602
+> Mendes, A., Agonia Pereira, L., & Vairinhos, V. (2026). *Study habits of
+> students at Universidade Atlântica* (Version 1.1.0) [Data set and
+> software]. Zenodo. https://doi.org/10.5281/zenodo.17127602
 
 The DOI `10.5281/zenodo.17127602` is the *concept DOI*: it always points to
 the latest version of the record. Each version also has its own specific
