@@ -1,73 +1,77 @@
-# Reprodução das análises quantitativas
+# Reproduction of the analyses
 
-Materiais de reprodutibilidade do estudo **"Study Engagement, Self-Regulation
-and Well-Being in Hybrid Higher Education"** (Universidade Atlântica, n = 69).
+Reproducibility materials for the study **"Student Engagement in Hybrid
+Higher Education: An Exploratory Institutional Case Study"** (Universidade
+Atlantica, n = 69).
 
-Este pacote contém o conjunto de dados e um programa em Python que reproduz,
-do princípio ao fim, todas as análises quantitativas descritas no artigo.
+This package contains the dataset and a Python program that reproduces,
+from start to finish, all the analyses reported in the article.
+
+*Versão em português: ver `README_PT.md`.*
 
 ---
 
-## Conteúdo do registo
+## Contents
 
-| Ficheiro | Descrição |
+| File | Description |
 |---|---|
-| `Questionario_Limpo.xlsx` | Dados do questionário (respostas anonimizadas). |
-| `reproducao_analise.py` | Programa que reproduz todas as análises quantitativas. |
-| `README.md` | Este ficheiro. |
+| `Questionario_Limpo.xlsx` | Questionnaire data (anonymised responses). |
+| `reproducao_analise.py` | Program that reproduces all the analyses in the article. |
+| `requirements.txt` | Exact versions of the libraries used. |
+| `README.md` | This file. |
 
-> Nota sobre a estrutura do Excel: a **primeira linha** contém o texto das
-> perguntas (não dados); as respostas começam na segunda linha. As colunas
-> estão numeradas de 1 a 67. O programa trata isto automaticamente.
-
----
-
-## O que o programa reproduz
-
-Seguindo a ordem do artigo, o programa calcula e apresenta:
-
-1. A fiabilidade (KR-20) dos três índices compostos.
-2. As estatísticas descritivas dos índices (Tabela 4 e Figura 2).
-3. As correlações de Spearman entre os índices e as horas de estudo
-   (Tabela 5 e Figura 3).
-4. A regressão robusta de Huber das horas de estudo, com e sem os dois casos
-   atípicos (Tabela 6).
-5. As diferenças por sexo, com o teste de Mann-Whitney e o delta de Cliff
-   (Tabela 7 e Figura 4).
-6. A análise de agrupamento (k-means) com validação por silhueta, reamostragem
-   bootstrap com semente fixa e concordância com o agrupamento hierárquico de
-   Ward (Tabela 8, Figuras 5a e 5b).
-7. A análise lexical das respostas abertas, por categoria temática definida
-   a priori no questionário: frequências de termos (Figura 6) e termos
-   caracteristicamente associados a cada categoria, ordenados pela razão de
-   log-verosimilhança G2 (Tabela 10).
-
-As figuras são gravadas na pasta `./figuras/`; os resultados numéricos são
-impressos no ecrã.
-
-**Âmbito.** O programa cobre a componente quantitativa **e** a análise textual
-das respostas abertas (Secção 3.9 do artigo). Ambas partem do mesmo ficheiro de
-dados, pelo que todos os números e figuras do artigo podem ser reproduzidos com
-uma única execução.
+> Note on the Excel structure: the **first row** contains the question
+> wording (not data); responses start on the second row. Columns are
+> numbered 1 to 67. The program handles this automatically.
 
 ---
 
-## Requisitos
+## What the program reproduces
 
-- Python 3.9 ou superior (os resultados do artigo foram verificados com
+Following the order of the article, the program computes and reports:
+
+1. Reliability (KR-20) of the three composite indices.
+2. Descriptive statistics of the indices (Table 4 and Figure 2).
+3. Spearman correlations between the indices and weekly study hours
+   (Table 5 and Figure 3).
+4. Huber robust regression of weekly study hours, with and without the two
+   atypical cases (Table 6).
+5. Differences by sex, using the Mann-Whitney test and Cliff's delta
+   (Table 7 and Figure 4).
+6. The clustering analysis (k-means) with validation by silhouette width,
+   fixed-seed bootstrap resampling and agreement with Ward hierarchical
+   clustering (Table 8, Figures 5a and 5b).
+7. The lexical analysis of the open-ended responses, by a priori thematic
+   category: term frequencies (Figure 6) and the terms most characteristic
+   of each category, ranked by the G2 log-likelihood ratio (Table 10).
+
+Figures are saved to `./figuras/`; numerical results are printed to the
+screen.
+
+**Scope.** The program covers both the quantitative component and the
+lexical analysis of the open-ended responses (Section 3.9 of the article).
+Both start from the same data file, so every number and figure in the
+article can be reproduced in a single run.
+
+---
+
+## Requirements
+
+- Python 3.9 or later (the results in the article were verified with
   Python 3.10.12).
-- Bibliotecas: `pandas`, `numpy`, `scipy`, `statsmodels`, `scikit-learn`,
-  `matplotlib`, `openpyxl` e `wordcloud` (esta última apenas para a Figura 6;
-  sem ela, o programa corre na mesma e avisa que a figura não foi gerada).
+- Libraries: `pandas`, `numpy`, `scipy`, `statsmodels`, `scikit-learn`,
+  `matplotlib`, `openpyxl` and `wordcloud` (the latter only for Figure 6;
+  without it, the program still runs and warns that the figure was not
+  generated).
 
-Instalação das bibliotecas:
+Installation:
 
 ```bash
 pip install pandas numpy scipy statsmodels scikit-learn matplotlib openpyxl wordcloud
 ```
 
-O ficheiro `requirements.txt` regista as versões exatas com que os resultados
-do artigo foram verificados; para um ambiente equivalente, use:
+The file `requirements.txt` records the exact versions used to verify the
+results; for an equivalent environment, use:
 
 ```bash
 pip install -r requirements.txt
@@ -75,61 +79,88 @@ pip install -r requirements.txt
 
 ---
 
-## Como executar
+## How to run
 
-1. Descarregue **todos os ficheiros deste registo** para a mesma pasta
-   (em particular, `reproducao_analise.py` e `Questionario_Limpo.xlsx`).
-2. Nessa pasta, execute:
+1. Download **all the files in this record** to the same folder
+   (in particular, `reproducao_analise.py` and `Questionario_Limpo.xlsx`).
+2. In that folder, run:
 
 ```bash
 python reproducao_analise.py
 ```
 
-### Origem dos dados: local ou Zenodo
+### Data source: local file or Zenodo
 
-O programa procura os dados por esta ordem:
+The program looks for the data in this order:
 
-1. **Ficheiro local** `Questionario_Limpo.xlsx`, na mesma pasta que o programa
-   (é o caso quando se descarrega o pacote completo deste registo). Esta é a
-   forma recomendada e funciona **sem ligação à internet**.
-2. Se o ficheiro local não for encontrado, o programa **descarrega os dados
-   automaticamente do Zenodo** (DOI abaixo) e prossegue.
-
-Assim, o programa funciona tanto com o pacote completo como sozinho.
+1. **Local file** `Questionario_Limpo.xlsx`, in the same folder as the
+   program (the case when the full package is downloaded). This is the
+   recommended route and works **offline**.
+2. If the local file is not found, the program **downloads the data
+   automatically from Zenodo** (DOI below) and continues.
 
 ---
 
-## Reprodutibilidade
+## Reproducibility
 
-Todos os passos com componente aleatória (k-means e reamostragem bootstrap)
-usam uma semente fixa (`RANDOM_STATE = 42`), pelo que os resultados são
-idênticos em cada execução. Os valores produzidos correspondem aos que constam
-no artigo.
+Every step with a random component (k-means and bootstrap resampling) uses
+a fixed seed (`RANDOM_STATE = 42`), so results are identical on every run
+and match the values reported in the article.
 
 ---
 
-## Como citar
+## Composition of the composite indices
 
-**Conjunto de dados e código (este registo):**
+Column numbers refer to `Questionario_Limpo.xlsx`. Each index is the
+unweighted mean of its items and ranges from 0 to 1.
 
-> Pereira, L. A. G. (2025). *Questionário sobre hábitos de estudo — dados e
-> código de reprodução* [Data set e software]. Zenodo.
+| Index | Column | Item (abridged wording) | Coding |
+|---|---|---|---|
+| Physical and mental well-being (6 items) | 39 | Ensures adequate sleep quality | Yes = 1, No = 0 |
+| | 40 | Considers their diet balanced | Yes = 1, No = 0 |
+| | 41 | Practises regular exercise or a hobby | Yes = 1, No = 0 |
+| | 42 | Manages stress and emotional balance | Yes = 1, No = 0 |
+| | 43 | Usually feels physical tiredness | Reverse-coded: Yes = 0, No = 1 |
+| | 44 | Usually feels psychological tiredness | Reverse-coded: Yes = 0, No = 1 |
+| Time management (3 items) | 28 | Creates study schedules/routines and meets goals | Yes = 1, No = 0 |
+| | 29 | Prioritises academic tasks efficiently | Yes = 1, No = 0 |
+| | 30 | Uses time efficiently, managing breaks | Yes = 1, No = 0 |
+| Online academic strategies (5 options of column 32) | 32 | Summarising texts | Selected = 1 |
+| | 32 | Doing exercises | Selected = 1 |
+| | 32 | Studying with peers (virtual communities) | Selected = 1 |
+| | 32 | Using online resources (videos, manuals, forums) | Selected = 1 |
+| | 32 | Creating mind maps / diagrams | Selected = 1 |
+| Weekly study hours | 27 | Average weekly study hours | Numeric value |
+
+The options "Estudar sozinho" (studying alone) and "Outro" (other) in
+column 32 are not part of the online strategies index because they do not
+denote a digital practice; the index is the number of digital options
+selected divided by five.
+
+---
+
+## How to cite
+
+**Dataset and code (this record):**
+
+> Pereira, L. A. G. (2025). *Study habits questionnaire - data and
+> reproduction code* [Data set and software]. Zenodo.
 > https://doi.org/10.5281/zenodo.17127602
 
-O DOI `10.5281/zenodo.17127602` é o *concept DOI*: aponta sempre para a versão
-mais recente do registo. Cada versão tem também o seu próprio DOI específico,
-apresentado na página do Zenodo; para referências que exijam uma versão exata,
-utilize o DOI da versão correspondente.
+The DOI `10.5281/zenodo.17127602` is the *concept DOI*: it always points to
+the latest version of the record. Each version also has its own specific
+DOI, shown on the Zenodo page; for references that require an exact
+version, use the DOI of that version.
 
 ---
 
-## Licença
+## Licence
 
-Consulte a licença indicada na página do registo no Zenodo.
+See the licence shown on the Zenodo record page.
 
 ---
 
-## Contacto
+## Contact
 
-Para questões sobre os dados ou o código, contacte o autor através da página
-do registo no Zenodo.
+For questions about the data or the code, contact the author through the
+Zenodo record page.
