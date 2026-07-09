@@ -146,10 +146,10 @@ número de opções digitais selecionadas a dividir por cinco.
 
 > Mendes, A., Agonia Pereira, L., & Vairinhos, V. (2026). *Study habits of
 > students at Universidade Atlântica* (Version 1.1.0) [Data set and
-> software]. Zenodo. https://doi.org/10.5281/zenodo.17127602
+> software]. Zenodo. https://doi.org/10.5281/zenodo.21284147
 
-O DOI `10.5281/zenodo.17127602` é o *concept DOI*: aponta sempre para a versão
-mais recente do registo. Cada versão tem também o seu próprio DOI específico,
+O DOI acima é o DOI específico da versão v1.1.0. O *concept DOI*
+`10.5281/zenodo.17127601` aponta sempre para a versão mais recente do registo. Cada versão tem também o seu próprio DOI específico,
 apresentado na página do Zenodo; para referências que exijam uma versão exata,
 utilize o DOI da versão correspondente.
 

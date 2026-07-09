@@ -12,7 +12,7 @@ Reproduz, do principio ao fim, todas as analises quantitativas do artigo:
 
   1. Carrega o conjunto de dados: le o ficheiro local "Questionario_Limpo.xlsx"
      se estiver ao lado do programa, ou descarrega-o do Zenodo
-     (DOI 10.5281/zenodo.17127602) caso contrario.
+     (concept DOI 10.5281/zenodo.17127601) caso contrario.
   2. Reconstroi os quatro indices usados no artigo (bem-estar, gestao do tempo,
      estrategias online e horas de estudo semanais).
   3. Calcula a fiabilidade (KR-20) de cada indice.
@@ -90,7 +90,7 @@ import matplotlib.pyplot as plt
 # Nota: se o ficheiro "Questionario_Limpo.xlsx" estiver na mesma pasta que este
 # programa (como no pacote completo do Zenodo), os dados sao lidos localmente e
 # a API nem chega a ser usada.
-ZENODO_RECORD_ID = "17127602"
+ZENODO_RECORD_ID = "17127601"
 ZENODO_API = f"https://zenodo.org/api/records/{ZENODO_RECORD_ID}"
 RANDOM_STATE = 42                    # Semente para resultados reproduziveis.
 NOME_FICHEIRO_LOCAL = "Questionario_Limpo.xlsx"  # Ficheiro de dados ao lado do script.
