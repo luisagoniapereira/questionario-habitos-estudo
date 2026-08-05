@@ -144,14 +144,15 @@ número de opções digitais selecionadas a dividir por cinco.
 
 **Conjunto de dados e código (este registo):**
 
-> Mendes, A., Agonia Pereira, L., & Vairinhos, V. (2026). *Study habits of
-> students at Universidade Atlântica* (Version 1.1.0) [Data set and
-> software]. Zenodo. https://doi.org/10.5281/zenodo.21284147
+> Mendes, A., Agonia Pereira, L., & Vairinhos, V. (2026). *Student Engagement
+> in Hybrid Higher Education: An Exploratory Institutional Case Study — Dataset
+> and Reproduction Code* (Version 1.1.1) [Data set and software]. Zenodo.
+> https://doi.org/10.5281/zenodo.17127601
 
-O DOI acima é o DOI específico da versão v1.1.0. O *concept DOI*
-`10.5281/zenodo.17127601` aponta sempre para a versão mais recente do registo. Cada versão tem também o seu próprio DOI específico,
-apresentado na página do Zenodo; para referências que exijam uma versão exata,
-utilize o DOI da versão correspondente.
+O DOI `10.5281/zenodo.17127601` é o *concept DOI*: aponta sempre para a versão
+mais recente do registo. Cada versão tem também o seu DOI específico, visível
+na página do Zenodo; a versão usada no artigo associado é a v1.1.0
+(`10.5281/zenodo.21284147`).
 
 ---
 
