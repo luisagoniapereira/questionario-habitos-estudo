@@ -2,7 +2,7 @@
 """
 =============================================================================
 REPRODUCAO COMPLETA DAS ANALISES DO ARTIGO (QUANTITATIVAS E TEXTUAIS)
-"Study Engagement, Self-Regulation and Well-Being in Hybrid Higher Education"
+"Student Engagement in Hybrid Higher Education: An Exploratory Institutional Case Study"
 (Universidade Atlantica, n = 69)
 =============================================================================
 
@@ -12,7 +12,8 @@ Reproduz, do principio ao fim, todas as analises quantitativas do artigo:
 
   1. Carrega o conjunto de dados: le o ficheiro local "Questionario_Limpo.xlsx"
      se estiver ao lado do programa, ou descarrega-o do Zenodo
-     (concept DOI 10.5281/zenodo.17127601) caso contrario.
+     (DOI de conceito 10.5281/zenodo.17127601, que resolve sempre para a
+     versao mais recente do registo) caso contrario.
   2. Reconstroi os quatro indices usados no artigo (bem-estar, gestao do tempo,
      estrategias online e horas de estudo semanais).
   3. Calcula a fiabilidade (KR-20) de cada indice.
@@ -307,7 +308,7 @@ def carregar_dados(nome_local=NOME_FICHEIRO_LOCAL):
          quando se descarrega o pacote completo do Zenodo (dados + script), que
          e a forma recomendada de reproduzir as analises. Funciona OFFLINE.
       2. Se o ficheiro local nao existir, DESCARREGA os dados do Zenodo
-         (registo 10.5281/zenodo.17127602, versao mais recente) atraves da API.
+         (registo de conceito 10.5281/zenodo.17127601, versao mais recente) atraves da API.
 
     Esta estrategia torna o programa robusto: funciona offline quando os dados
     estao ao lado do script, e continua a funcionar a partir da internet quando
