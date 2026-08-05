@@ -1,6 +1,6 @@
 {
-  "title": "Study habits of students at Universidade Atlântica",
-  "version": "1.1.0",
+  "title": "Student Engagement in Hybrid Higher Education: An Exploratory Institutional Case Study — Dataset and Reproduction Code",
+  "version": "1.1.1",
   "upload_type": "software",
   "description": "Dataset and commented Python program that reproduce, end to end, all the quantitative and lexical analyses of a study on study habits, self-regulation and well-being in hybrid higher education (n = 69). The associated article is currently under review; its full reference will be added upon acceptance. The package includes the anonymised questionnaire data, the reproduction script (fixed random seed), the exact library versions (requirements.txt) and full documentation of the composite indices.",
   "creators": [
@@ -9,6 +9,6 @@
     {"name": "Vairinhos, Valter", "affiliation": "ICLab-ICAA - Intellectual Capital Association, Santarém, Portugal; CINAV - Naval Research Centre - Escola Naval, Almada, Portugal", "orcid": "0000-0001-9390-5340"}
   ],
   "license": "cc-by-nc-4.0",
-  "keywords": ["dataset", "study habits", "hybrid learning", "higher education", "reproducible research"],
+  "keywords": ["student engagement", "self-regulated learning", "hybrid higher education", "academic well-being", "reproducible research"],
   "language": "eng"
 }
