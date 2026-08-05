@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this dataset or code, please cite it as below."
-title: "Study habits of students at Universidade Atlântica"
-version: "1.1.0"
-doi: "10.5281/zenodo.17127602"
+title: "Student Engagement in Hybrid Higher Education: An Exploratory Institutional Case Study — Dataset and Reproduction Code"
+version: "1.1.1"
+doi: "10.5281/zenodo.17127601"
 authors:
   - family-names: "Mendes"
     given-names: "Ana"
@@ -14,12 +14,12 @@ authors:
     given-names: "Valter"
     affiliation: "ICLab-ICAA - Intellectual Capital Association, Santarém, Portugal; CINAV - Naval Research Centre - Escola Naval, Almada, Portugal"
     orcid: "https://orcid.org/0000-0001-9390-5340"
-date-released: "2026-07-09"
+date-released: "2026-08-05"
 license: "CC-BY-NC-4.0"
 repository-code: "https://github.com/luisagoniapereira/questionario-habitos-estudo"
 keywords:
-  - dataset
-  - study habits
-  - hybrid learning
-  - higher education
+  - student engagement
+  - self-regulated learning
+  - hybrid higher education
+  - academic well-being
   - reproducible research
