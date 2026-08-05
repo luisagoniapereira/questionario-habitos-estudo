@@ -144,15 +144,15 @@ selected divided by five.
 
 **Dataset and code (this record):**
 
-> Mendes, A., Agonia Pereira, L., & Vairinhos, V. (2026). *Study habits of
-> students at Universidade Atlântica* (Version 1.1.0) [Data set and
-> software]. Zenodo. https://doi.org/10.5281/zenodo.21284147
+> Mendes, A., Agonia Pereira, L., & Vairinhos, V. (2026). *Student Engagement
+> in Hybrid Higher Education: An Exploratory Institutional Case Study — Dataset
+> and Reproduction Code* (Version 1.1.1) [Data set and software]. Zenodo.
+> https://doi.org/10.5281/zenodo.17127601
 
-The DOI above is the version DOI of v1.1.0. The *concept DOI*
-`10.5281/zenodo.17127601` always points to
-the latest version of the record. Each version also has its own specific
-DOI, shown on the Zenodo page; for references that require an exact
-version, use the DOI of that version.
+The DOI `10.5281/zenodo.17127601` is the *concept DOI*: it always points to
+the latest version of the record. Each version also has its own specific DOI,
+shown on the Zenodo page; the version used in the associated article is
+v1.1.0 (`10.5281/zenodo.21284147`).
 
 ---
 
