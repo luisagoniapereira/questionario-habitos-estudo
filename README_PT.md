@@ -32,20 +32,25 @@ Seguindo a ordem do artigo, o programa calcula e apresenta:
 1. A fiabilidade (KR-20) dos três índices compostos.
 2. As estatísticas descritivas dos índices (Tabela 4 e Figura 2).
 3. As correlações de Spearman entre os índices e as horas de estudo
-   (Tabela 5 e Figura 3).
+   (Figura 3).
 4. A regressão robusta de Huber das horas de estudo, com e sem os dois casos
-   atípicos (Tabela 6).
+   atípicos (Tabela 5).
 5. As diferenças por sexo, com o teste de Mann-Whitney e o delta de Cliff
-   (Tabela 7 e Figura 4).
+   (Tabela 6).
 6. A análise de agrupamento (k-means) com validação por silhueta, reamostragem
    bootstrap com semente fixa e concordância com o agrupamento hierárquico de
-   Ward (Tabela 8, Figuras 5a e 5b).
+   Ward (Tabela 7 e a projeção PCA na Figura 4).
 7. A análise lexical das respostas abertas, por categoria temática definida
-   a priori no questionário: frequências de termos (Figura 6) e termos
-   caracteristicamente associados a cada categoria, ordenados pela razão de
-   log-verosimilhança G2 (Tabela 10).
+   a priori no questionário: os termos caracteristicamente associados a cada
+   categoria, ordenados pela razão de log-verosimilhança G2 (Tabela 9).
 
-As figuras são gravadas na pasta `./figuras/`; os resultados numéricos são
+Algumas análises que foram realizadas durante o estudo mas não incluídas no
+artigo são ainda produzidas como diagnósticos, sem número de figura do artigo:
+o gráfico de cotovelo para o número de grupos, os boxplots por sexo e uma
+nuvem de palavras com as frequências brutas dos termos. Nenhum número no
+programa aponta para um elemento ausente do artigo.
+
+As figuras são gravadas na pasta `./figures/`; os resultados numéricos são
 impressos no ecrã.
 
 **Âmbito.** O programa cobre a componente quantitativa **e** a análise textual
@@ -60,7 +65,8 @@ uma única execução.
 - Python 3.9 ou superior (os resultados do artigo foram verificados com
   Python 3.10.12).
 - Bibliotecas: `pandas`, `numpy`, `scipy`, `statsmodels`, `scikit-learn`,
-  `matplotlib`, `openpyxl` e `wordcloud` (esta última apenas para a Figura 6;
+  `matplotlib`, `openpyxl` e `wordcloud` (esta última apenas para a nuvem de
+  palavras de diagnóstico;
   sem ela, o programa corre na mesma e avisa que a figura não foi gerada).
 
 Instalação das bibliotecas:
@@ -146,13 +152,13 @@ número de opções digitais selecionadas a dividir por cinco.
 
 > Mendes, A., Agonia Pereira, L., & Vairinhos, V. (2026). *Student Engagement
 > in Hybrid Higher Education: An Exploratory Institutional Case Study - Dataset
-> and Reproduction Code* (Version 1.1.1) [Data set and software]. Zenodo.
+> and Reproduction Code* [Data set and software]. Zenodo.
 > https://doi.org/10.5281/zenodo.17127601
 
 O DOI `10.5281/zenodo.17127601` é o *concept DOI*: aponta sempre para a versão
-mais recente do registo. Cada versão tem também o seu DOI específico, visível
-na página do Zenodo; a versão usada no artigo associado é a v1.1.0
-(`10.5281/zenodo.21284147`).
+mais recente do registo. É este o DOI citado no artigo associado, pelo que a
+citação remete sempre para a versão mais recente. Cada versão tem também o seu
+DOI específico, visível na página do Zenodo.
 
 ---
 

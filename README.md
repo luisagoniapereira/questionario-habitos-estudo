@@ -34,19 +34,25 @@ Following the order of the article, the program computes and reports:
 1. Reliability (KR-20) of the three composite indices.
 2. Descriptive statistics of the indices (Table 4 and Figure 2).
 3. Spearman correlations between the indices and weekly study hours
-   (Table 5 and Figure 3).
+   (Figure 3).
 4. Huber robust regression of weekly study hours, with and without the two
-   atypical cases (Table 6).
+   atypical cases (Table 5).
 5. Differences by sex, using the Mann-Whitney test and Cliff's delta
-   (Table 7 and Figure 4).
+   (Table 6).
 6. The clustering analysis (k-means) with validation by silhouette width,
    fixed-seed bootstrap resampling and agreement with Ward hierarchical
-   clustering (Table 8, Figures 5a and 5b).
+   clustering (Table 7 and the PCA projection in Figure 4).
 7. The lexical analysis of the open-ended responses, by a priori thematic
-   category: term frequencies (Figure 6) and the terms most characteristic
-   of each category, ranked by the G2 log-likelihood ratio (Table 10).
+   category: the terms most characteristic of each category, ranked by the
+   G2 log-likelihood ratio (Table 9).
 
-Figures are saved to `./figuras/`; numerical results are printed to the
+Some analyses that were run during the study but not included in the article
+are still produced as diagnostics, with no article figure number: the elbow
+plot for the cluster count, the by-gender box plots, and a word-cloud overview
+of raw term frequencies. No number in the program points to an element that is
+absent from the article.
+
+Figures are saved to `./figures/`; numerical results are printed to the
 screen.
 
 **Scope.** The program covers both the quantitative component and the
@@ -61,9 +67,9 @@ article can be reproduced in a single run.
 - Python 3.9 or later (the results in the article were verified with
   Python 3.10.12).
 - Libraries: `pandas`, `numpy`, `scipy`, `statsmodels`, `scikit-learn`,
-  `matplotlib`, `openpyxl` and `wordcloud` (the latter only for Figure 6;
-  without it, the program still runs and warns that the figure was not
-  generated).
+  `matplotlib`, `openpyxl` and `wordcloud` (the latter only for the
+  diagnostic word cloud; without it, the program still runs and warns that
+  the figure was not generated).
 
 Installation:
 
@@ -146,13 +152,13 @@ selected divided by five.
 
 > Mendes, A., Agonia Pereira, L., & Vairinhos, V. (2026). *Student Engagement
 > in Hybrid Higher Education: An Exploratory Institutional Case Study - Dataset
-> and Reproduction Code* (Version 1.1.1) [Data set and software]. Zenodo.
+> and Reproduction Code* [Data set and software]. Zenodo.
 > https://doi.org/10.5281/zenodo.17127601
 
 The DOI `10.5281/zenodo.17127601` is the *concept DOI*: it always points to
-the latest version of the record. Each version also has its own specific DOI,
-shown on the Zenodo page; the version used in the associated article is
-v1.1.0 (`10.5281/zenodo.21284147`).
+the latest version of the record. This is the DOI cited in the associated
+article, so the citation always resolves to the most recent version. Each
+version also has its own specific DOI, shown on the Zenodo page.
 
 ---
 

@@ -18,17 +18,28 @@ Reproduces, end to end, all the analyses reported in the article:
      management, online strategies and weekly study hours).
   3. Computes the reliability (KR-20) of each index.
   4. Produces the descriptive statistics (Table 4).
-  5. Computes the Spearman correlations (Table 5 and Figure 3).
-  6. Compares genders with the Mann-Whitney test and Cliff's delta (Table 6).
-  7. Fits the robust Huber regression, with and without the atypical cases
-     (Table 6).
+  5. Computes the Spearman correlations (Figure 3).
+  6. Fits the robust Huber regression, with and without the atypical cases
+     (Table 5).
+  7. Compares genders with the Mann-Whitney test and Cliff's delta (Table 6).
   8. Runs the cluster analysis (k-means) with explicit validation:
-     silhouette, bootstrap stability and agreement with Ward (Figures 5a/5b,
-     Table 8).
+     silhouette, bootstrap stability and agreement with Ward. The two-group
+     structure is shown in the PCA projection (Figure 4) and characterised in
+     Table 7. The elbow plot is produced as a diagnostic only and is not shown
+     in the article.
   9. Analyses the open-ended responses by a priori thematic category
-     (Section 3.9): term frequencies in the corpus (Figure 6) and the most
-     characteristic terms of each category, by G2 log-likelihood ratio
-     (Table 10).
+     (Section 3.9): the most characteristic terms of each category, by G2
+     log-likelihood ratio (Table 9). A word-cloud overview of raw term
+     frequencies is produced as a diagnostic only and is not shown in the
+     article.
+
+NOTE ON FIGURE AND TABLE NUMBERS
+--------------------------------
+The numbers used here match the published article. Some analyses that were run
+during the study but not included in the article (the elbow plot, the by-gender
+box plots and the word cloud) are still produced by this script as diagnostics,
+but they carry no article figure number, so no number here points to an element
+that is absent from the article.
 
 NOTE ON SCOPE
 -------------
@@ -49,7 +60,7 @@ HOW TO RUN
     pip install pandas numpy scipy statsmodels scikit-learn matplotlib openpyxl
     python reproducao_analise.py
 
-Figures are saved to the ./figuras/ folder and the numerical results are
+Figures are saved to the ./figures/ folder and the numerical results are
 printed to the screen.
 
 REPRODUCIBILITY
@@ -102,8 +113,8 @@ ZENODO_RECORD_ID = "17127601"
 ZENODO_API = f"https://zenodo.org/api/records/{ZENODO_RECORD_ID}"
 RANDOM_STATE = 42                    # Seed for reproducible results.
 LOCAL_DATA_FILENAME = "Questionario_Limpo.xlsx"  # Data file next to the script.
-FIGURES_DIR = Path("figuras")
-FIGURES_DIR.mkdir(exist_ok=True)     # Create ./figuras/ if it does not exist.
+FIGURES_DIR = Path("figures")
+FIGURES_DIR.mkdir(exist_ok=True)     # Create ./figures/ if it does not exist.
 
 
 # ---------------------------------------------------------------------------
@@ -482,7 +493,7 @@ def descriptive_table(indices):
 
 
 # ---------------------------------------------------------------------------
-# 5. SPEARMAN CORRELATIONS (TABLE 5 AND FIGURE 3)
+# 5. SPEARMAN CORRELATIONS (FIGURE 3)
 # ---------------------------------------------------------------------------
 def spearman_correlations(indices):
     """
@@ -494,7 +505,7 @@ def spearman_correlations(indices):
     linear.
     """
     print("=" * 70)
-    print("TABLE 5 / FIGURE 3 - SPEARMAN CORRELATIONS")
+    print("FIGURE 3 - SPEARMAN CORRELATIONS")
     print("=" * 70)
     d = indices.dropna()
     columns = ["hours", "well_being", "time_management", "online"]
@@ -531,14 +542,14 @@ def spearman_correlations(indices):
     bar = fig.colorbar(image, ax=ax, shrink=0.8)
     bar.set_label("Spearman's rho")
     plt.tight_layout()
-    path = FIGURES_DIR / "figura3_correlacoes.png"
+    path = FIGURES_DIR / "figure3_correlation_matrix.png"
     plt.savefig(path, dpi=150, bbox_inches="tight")
     plt.close()
     print(f"  [Figure 3 saved to {path}]\n")
 
 
 # ---------------------------------------------------------------------------
-# 6. GENDER DIFFERENCES (TABLE 7)
+# 6. GENDER DIFFERENCES (TABLE 6)
 # ---------------------------------------------------------------------------
 def gender_differences(data, indices):
     """
@@ -548,7 +559,7 @@ def gender_differences(data, indices):
     Column 7 of the questionnaire holds the gender ("Masculino"/"Feminino").
     """
     print("=" * 70)
-    print("TABLE 7 - GENDER DIFFERENCES (Mann-Whitney U and Cliff's delta)")
+    print("TABLE 6 - GENDER DIFFERENCES (Mann-Whitney U and Cliff's delta)")
     print("=" * 70)
     d = indices.copy()
     d["gender"] = data[7]
@@ -582,7 +593,7 @@ def gender_differences(data, indices):
 
 
 # ---------------------------------------------------------------------------
-# 7. ROBUST REGRESSION (TABLE 6)
+# 7. ROBUST REGRESSION (TABLE 5)
 # ---------------------------------------------------------------------------
 def robust_regression(indices):
     """
@@ -606,7 +617,7 @@ def robust_regression(indices):
     That value describes the OLS fit, not the robust model's.
     """
     print("=" * 70)
-    print("TABLE 6 - ROBUST (HUBER) REGRESSION OF STUDY HOURS")
+    print("TABLE 5 - ROBUST (HUBER) REGRESSION OF STUDY HOURS")
     print("=" * 70)
     d = indices.dropna()
 
@@ -635,13 +646,14 @@ def robust_regression(indices):
 
 
 # ---------------------------------------------------------------------------
-# 8. CLUSTER ANALYSIS (FIGURES 5a AND 5b)
+# 8. CLUSTER ANALYSIS (FIGURE 4; ELBOW PLOT AS DIAGNOSTIC ONLY)
 # ---------------------------------------------------------------------------
 def cluster_analysis(indices):
     """
     Runs k-means on the 67 non-atypical students, validates the two-group
-    solution and produces two figures: the elbow plot (5a) and the PCA
-    projection of the groups (5b).
+    solution and produces the PCA projection of the groups (Figure 4 in the
+    article). An elbow plot is also produced as a diagnostic; it is not shown
+    in the article and carries no article figure number.
 
     WHY SET THE OUTLIERS ASIDE?
     K-means minimises squared distances and is very sensitive to extreme
@@ -654,7 +666,7 @@ def cluster_analysis(indices):
       - Agreement with hierarchical clustering (Ward), as a cross-check.
     """
     print("=" * 70)
-    print("CLUSTERING (k-means) - FIGURES 5a and 5b")
+    print("CLUSTERING (k-means) - FIGURE 4 (elbow plot as diagnostic only)")
     print("=" * 70)
     d = indices.dropna().reset_index(drop=True)
     non_atypical = d[d.hours < 70].reset_index(drop=True)
@@ -723,7 +735,7 @@ def cluster_analysis(indices):
               mean_hours.index[1]: "Group 2 (high load)"}
     non_atypical["group_name"] = non_atypical.group.map(rename)
 
-    print("\n  TABLE 8 - Characterisation of the groups (means on the original scales):")
+    print("\n  TABLE 7 - Characterisation of the groups (means on the original scales):")
     summary = non_atypical.groupby("group_name").agg(
         n=("hours", "size"), hours=("hours", "mean"),
         well_being=("well_being", "mean"),
@@ -739,7 +751,7 @@ def cluster_analysis(indices):
           f" time_management={atypical.time_management.mean():.2f}"
           f" online={atypical.online.mean():.2f}")
 
-    # --- Figure 5a: elbow plot ----------------------------------------------
+    # --- Elbow plot (diagnostic only; not shown in the article) -------------
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.2))
     for ax, (subset, title) in zip(
             axes, [(d, "Full sample (n=69)"),
@@ -753,12 +765,12 @@ def cluster_analysis(indices):
         ax.set_title(title)
         ax.grid(alpha=0.3)
     plt.tight_layout()
-    path_5a = FIGURES_DIR / "figura5a_cotovelo.png"
-    plt.savefig(path_5a, dpi=150, bbox_inches="tight")
+    path_elbow = FIGURES_DIR / "diagnostic_elbow_plot.png"
+    plt.savefig(path_elbow, dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"\n  [Figure 5a saved to {path_5a}]")
+    print(f"\n  [Elbow plot (diagnostic, not in the article) saved to {path_elbow}]")
 
-    # --- Figure 5b: PCA projection (computed on all 69) ---------------------
+    # --- Figure 4: PCA projection (computed on all 69) ---------------------
     scaler = StandardScaler().fit(d[variables])
     pca = PCA(n_components=2, random_state=RANDOM_STATE).fit(
         scaler.transform(d[variables]))
@@ -789,14 +801,14 @@ def cluster_analysis(indices):
               fontsize=9, framealpha=0.9)
     ax.grid(alpha=0.25)
     plt.tight_layout()
-    path_5b = FIGURES_DIR / "figura5b_pca.png"
-    plt.savefig(path_5b, dpi=150, bbox_inches="tight")
+    path_pca = FIGURES_DIR / "figure4_pca_projection.png"
+    plt.savefig(path_pca, dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"  [Figure 5b saved to {path_5b}]\n")
+    print(f"  [Figure 4 saved to {path_pca}]\n")
 
 
 # ---------------------------------------------------------------------------
-# 9. DESCRIPTIVE FIGURES OF THE ARTICLE (FIGURE 2 AND FIGURE 4)
+# 9. DESCRIPTIVE FIGURES (FIGURE 2; BY-GENDER BOX PLOTS AS DIAGNOSTIC ONLY)
 # ---------------------------------------------------------------------------
 def figure2_boxplots(indices):
     """
@@ -820,19 +832,23 @@ def figure2_boxplots(indices):
     ax.set_ylabel("Normalised score (0-1)")
     ax.grid(axis="y", alpha=0.3)
     plt.tight_layout()
-    path = FIGURES_DIR / "figura2_boxplots_indices.png"
+    path = FIGURES_DIR / "figure2_index_boxplots.png"
     plt.savefig(path, dpi=150, bbox_inches="tight")
     plt.close()
     print(f"  [Figure 2 saved to {path}]\n")
 
 
-def figure4_gender_differences(data, indices):
+def diagnostic_gender_boxplots(data, indices):
     """
-    Figure 4 of the article: distribution of the three indices by gender, with
-    the Mann-Whitney p-value and Cliff's delta in the title of each panel.
+    Diagnostic figure (not shown in the article): distribution of the three
+    indices by gender, with the Mann-Whitney p-value and Cliff's delta in the
+    title of each panel.
 
-    The values are COMPUTED here (not copied), so the figure is automatically
-    consistent with Table 7.
+    The by-gender box plots were dropped from the article because the gender
+    contrast is fully reported by the statistics and effect sizes in Table 6;
+    the plot is kept here as a diagnostic and carries no article figure number.
+    The values are COMPUTED here (not copied), so the figure stays consistent
+    with Table 6.
     """
     d = indices.copy()
     d["gender"] = data[7]
@@ -861,10 +877,10 @@ def figure4_gender_differences(data, indices):
         ax.set_ylabel("Normalised score (0-1)")
         ax.grid(axis="y", alpha=0.3)
     plt.tight_layout()
-    path = FIGURES_DIR / "figura4_diferencas_sexo.png"
+    path = FIGURES_DIR / "diagnostic_gender_boxplots.png"
     plt.savefig(path, dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"  [Figure 4 saved to {path}]\n")
+    print(f"  [By-gender box plots (diagnostic, not in the article) saved to {path}]\n")
 
 
 # ---------------------------------------------------------------------------
@@ -966,11 +982,14 @@ def text_analysis(header, data):
       1. Builds the corpus from the 11 free-text items (one "response" = one
          student's text on one item), ignoring empty or contentless answers
          ("sim", "nao", "-").
-      2. Counts the global term frequencies and generates the word cloud
-         (Figure 6), if the `wordcloud` package is installed.
+      2. Counts the global term frequencies and, if the `wordcloud` package is
+         installed, generates a word cloud. The word cloud was dropped from the
+         article (raw frequencies say little about what is distinctive of each
+         category); it is kept here as a diagnostic and carries no article
+         figure number.
       3. For each category, identifies the most characteristic terms (highest
          G2 against the rest of the corpus), requiring a minimum frequency of
-         4 occurrences within the category (Table 10).
+         4 occurrences within the category (Table 9).
     """
     from collections import Counter
 
@@ -993,7 +1012,7 @@ def text_analysis(header, data):
           f"{len(TEXT_CATEGORIES)} categories.")
     print(corpus["category"].value_counts().to_string())
 
-    # --- 2. Global frequencies and Figure 6 (word cloud) --------------------
+    # --- 2. Global frequencies and word cloud (diagnostic; not in article) --
     frequencies = Counter(t for tokens in corpus["tokens"] for t in tokens)
     print("\n  Most frequent terms in the corpus (top 15):")
     for term, freq in frequencies.most_common(15):
@@ -1008,16 +1027,16 @@ def text_analysis(header, data):
         ax.imshow(cloud, interpolation="bilinear")
         ax.axis("off")
         plt.tight_layout()
-        path = FIGURES_DIR / "figura6_nuvem_palavras.png"
+        path = FIGURES_DIR / "diagnostic_wordcloud.png"
         plt.savefig(path, dpi=150, bbox_inches="tight")
         plt.close()
-        print(f"\n  [Figure 6 saved to {path}]")
+        print(f"\n  [Word cloud (diagnostic, not in the article) saved to {path}]")
     except ImportError:
-        print("\n  [The 'wordcloud' package is not installed; Figure 6 was "
-              "not generated. Install it with: pip install wordcloud]")
+        print("\n  [The 'wordcloud' package is not installed; the diagnostic word "
+              "cloud was not generated. Install it with: pip install wordcloud]")
 
-    # --- 3. Characteristic terms per category (Table 10) --------------------
-    print("\n  TABLE 10 - Most characteristic terms of each category")
+    # --- 3. Characteristic terms per category (Table 9) --------------------
+    print("\n  TABLE 9 - Most characteristic terms of each category")
     print("  (G2 log-likelihood ratio vs. the rest of the corpus; min. frequency 4)")
     table_rows = []
     for category in TEXT_CATEGORIES:
@@ -1049,10 +1068,10 @@ def text_analysis(header, data):
             table_rows.append({"category": category, "term": t,
                                "frequency": f, "G2": round(g, 1)})
 
-    table10 = pd.DataFrame(table_rows)
-    csv_path = FIGURES_DIR / "tabela10_termos_por_categoria.csv"
-    table10.to_csv(csv_path, index=False)
-    print(f"\n  [Table 10 saved to {csv_path}]\n")
+    table9 = pd.DataFrame(table_rows)
+    csv_path = FIGURES_DIR / "table9_terms_by_category.csv"
+    table9.to_csv(csv_path, index=False)
+    print(f"\n  [Table 9 saved to {csv_path}]\n")
 
 
 # ---------------------------------------------------------------------------
@@ -1064,17 +1083,20 @@ def main():
     indices, digital_core = build_indices(data)
 
     compute_reliabilities(data, digital_core)
-    descriptive_table(indices)
-    figure2_boxplots(indices)
-    spearman_correlations(indices)
-    robust_regression(indices)
-    gender_differences(data, indices)
-    figure4_gender_differences(data, indices)
-    cluster_analysis(indices)
-    text_analysis(header, data)
+    descriptive_table(indices)          # Table 4
+    figure2_boxplots(indices)           # Figure 2
+    spearman_correlations(indices)      # Figure 3
+    robust_regression(indices)          # Table 5
+    gender_differences(data, indices)   # Table 6
+    cluster_analysis(indices)           # Figure 4 + Table 7 (elbow = diagnostic)
+    text_analysis(header, data)         # Table 9 (word cloud = diagnostic)
+
+    # Diagnostic figure kept for completeness; not shown in the article.
+    diagnostic_gender_boxplots(data, indices)
 
     print("=" * 70)
-    print("ANALYSIS COMPLETE. The figures are in the ./figuras/ folder.")
+    print("ANALYSIS COMPLETE. Article figures and the diagnostic plots are in")
+    print("the ./figures/ folder.")
     print("=" * 70)
 
 

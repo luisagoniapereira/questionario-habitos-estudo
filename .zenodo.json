@@ -1,14 +1,32 @@
 {
   "title": "Student Engagement in Hybrid Higher Education: An Exploratory Institutional Case Study - Dataset and Reproduction Code",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "upload_type": "software",
   "description": "Dataset and commented Python program that reproduce, end to end, all the quantitative and lexical analyses of a study on study habits, self-regulation and well-being in hybrid higher education (n = 69). The associated article is currently under review; its full reference will be added upon acceptance. The package includes the anonymised questionnaire data, the reproduction script (fixed random seed), the exact library versions (requirements.txt) and full documentation of the composite indices.",
   "creators": [
-    {"name": "Mendes, Ana", "affiliation": "Instituto Politécnico de Setúbal, Setúbal, Portugal"},
-    {"name": "Agonia Pereira, Luís", "affiliation": "Instituto Politécnico de Setúbal, Setúbal, Portugal"},
-    {"name": "Vairinhos, Valter", "affiliation": "ICLab-ICAA - Intellectual Capital Association, Santarém, Portugal; CINAV - Naval Research Centre - Escola Naval, Almada, Portugal", "orcid": "0000-0001-9390-5340"}
+    {
+      "name": "Mendes, Ana",
+      "affiliation": "Instituto Politécnico de Setúbal, Setúbal, Portugal"
+    },
+    {
+      "name": "Agonia Pereira, Luís",
+      "affiliation": "Instituto Politécnico de Setúbal, Setúbal, Portugal"
+    },
+    {
+      "name": "Vairinhos, Valter",
+      "affiliation": "ICLab-ICAA - Intellectual Capital Association, Santarém, Portugal; CINAV - Naval Research Centre - Escola Naval, Almada, Portugal",
+      "orcid": "0000-0001-9390-5340"
+    }
   ],
   "license": "cc-by-nc-4.0",
-  "keywords": ["student engagement", "self-regulated learning", "hybrid higher education", "academic well-being", "reproducible research"],
+  "keywords": [
+    "dataset",
+    "reproducible research",
+    "student engagement",
+    "hybrid higher education",
+    "self-regulated learning",
+    "time management",
+    "academic well-being"
+  ],
   "language": "eng"
 }
