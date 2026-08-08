@@ -1,5 +1,5 @@
 {
-  "title": "Student Engagement in Hybrid Higher Education: An Exploratory Institutional Case Study — Dataset and Reproduction Code",
+  "title": "Student Engagement in Hybrid Higher Education: An Exploratory Institutional Case Study - Dataset and Reproduction Code",
   "version": "1.1.1",
   "upload_type": "software",
   "description": "Dataset and commented Python program that reproduce, end to end, all the quantitative and lexical analyses of a study on study habits, self-regulation and well-being in hybrid higher education (n = 69). The associated article is currently under review; its full reference will be added upon acceptance. The package includes the anonymised questionnaire data, the reproduction script (fixed random seed), the exact library versions (requirements.txt) and full documentation of the composite indices.",
