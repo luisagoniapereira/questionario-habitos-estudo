@@ -145,7 +145,7 @@ selected divided by five.
 **Dataset and code (this record):**
 
 > Mendes, A., Agonia Pereira, L., & Vairinhos, V. (2026). *Student Engagement
-> in Hybrid Higher Education: An Exploratory Institutional Case Study — Dataset
+> in Hybrid Higher Education: An Exploratory Institutional Case Study - Dataset
 > and Reproduction Code* (Version 1.1.1) [Data set and software]. Zenodo.
 > https://doi.org/10.5281/zenodo.17127601
 
