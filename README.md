@@ -70,6 +70,10 @@ Agonia Pereira, L., Vairinhos, V. M., & Mendes, A. J. (2026). *Student Engagemen
 
 The DOI above identifies the published Zenodo record for version 2.0.0.
 
+### Release note
+
+The Zenodo archive for version 2.0.0 was deposited manually after a GitHub–Zenodo integration failure. The current `main` branch contains the final metadata associated with DOI https://doi.org/10.5281/zenodo.24224469. The immutable GitHub tag `v2.0.0` predates this metadata correction.
+
 ## Licence
 
 This repository is distributed under the licence specified in `LICENSE` and in the Zenodo record.
