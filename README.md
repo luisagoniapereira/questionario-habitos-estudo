@@ -66,7 +66,7 @@ The publication and repository creator order is:
 
 ## Citation
 
-Agonia Pereira, L., Vairinhos, V. M., & Mendes, A. J. (2026). *Student Engagement in Technology-Mediated Hybrid Higher Education: An Exploratory Institutional Case Study - Dataset and Reproduction Code* (Version 2.0.0) [Data set and computer software]. Zenodo. https://doi.org/10.5281/zenodo.24224469
+Agonia Pereira, L., Mendes, A. J., & Vairinhos, V. M. (2026). *Student Engagement in Technology-Mediated Hybrid Higher Education: An Exploratory Institutional Case Study - Dataset and Reproduction Code* (Version 2.0.0) [Data set and computer software]. Zenodo. https://doi.org/10.5281/zenodo.24224469
 
 The DOI above identifies the published Zenodo record for version 2.0.0.
 
