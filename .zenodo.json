@@ -1,32 +1,34 @@
 {
-  "title": "Student Engagement in Hybrid Higher Education: An Exploratory Institutional Case Study - Dataset and Reproduction Code",
-  "version": "1.1.2",
+  "title": "Student Engagement in Technology-Mediated Hybrid Higher Education: An Exploratory Institutional Case Study - Dataset and Reproduction Code",
+  "version": "2.0.0",
   "upload_type": "software",
-  "description": "Dataset and commented Python program that reproduce, end to end, all the quantitative and lexical analyses of a study on study habits, self-regulation and well-being in hybrid higher education (n = 69). The associated article is currently under review; its full reference will be added upon acceptance. The package includes the anonymised questionnaire data, the reproduction script (fixed random seed), the exact library versions (requirements.txt) and full documentation of the composite indices.",
+  "access_right": "open",
+  "description": "Anonymised questionnaire dataset and fully commented Python code supporting the article 'Student Engagement in Technology-Mediated Hybrid Higher Education: An Exploratory Institutional Case Study'. The release reproduces the composite-index reliability analyses, descriptive statistics, Spearman correlations with bootstrap confidence intervals, item-level analyses, gender comparisons using Mann-Whitney tests and Cliff's delta, robust regression models, programme-adjusted sensitivity analyses, exploratory clustering with and without weekly study hours, and scripted lexical analysis of open-ended responses.",
   "creators": [
-    {
-      "name": "Mendes, Ana",
-      "affiliation": "Instituto Politécnico de Setúbal, Setúbal, Portugal"
-    },
     {
       "name": "Agonia Pereira, Luís",
       "affiliation": "Instituto Politécnico de Setúbal, Setúbal, Portugal"
     },
     {
-      "name": "Vairinhos, Valter",
-      "affiliation": "ICLab-ICAA - Intellectual Capital Association, Santarém, Portugal; CINAV - Naval Research Centre - Escola Naval, Almada, Portugal",
+      "name": "Vairinhos, Valter Martins",
+      "affiliation": "ICLab - ICAA - Intellectual Capital Association, Santarém, Portugal; CINAV - Naval Research Centre - Escola Naval, Almada, Portugal",
       "orcid": "0000-0001-9390-5340"
+    },
+    {
+      "name": "Mendes, Ana de Jesus",
+      "affiliation": "Instituto Politécnico de Setúbal, Setúbal, Portugal"
     }
   ],
   "license": "cc-by-nc-4.0",
   "keywords": [
-    "dataset",
-    "reproducible research",
-    "student engagement",
     "hybrid higher education",
+    "student engagement",
     "self-regulated learning",
     "time management",
-    "academic well-being"
+    "well-being",
+    "online academic strategies",
+    "reproducible research",
+    "higher education"
   ],
   "language": "eng"
 }
