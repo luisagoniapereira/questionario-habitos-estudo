@@ -61,8 +61,8 @@ Documentation, output and plot labels use British English. Portuguese strings ar
 The publication and repository creator order is:
 
 1. **Luís Agonia Pereira**
-2. **Valter Martins Vairinhos**
-3. **Ana de Jesus Mendes**
+2. **Ana de Jesus Mendes**
+3. **Valter Martins Vairinhos**
 
 ## Citation
 
