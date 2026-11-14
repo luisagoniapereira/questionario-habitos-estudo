@@ -1,6 +1,6 @@
 ==============================================================================
 ICITS'27 PAPER 426 - REPRODUCIBILITY ANALYSIS
-Authors: Luís Agonia Pereira; Valter Martins Vairinhos; Ana de Jesus Mendes
+Authors: Luís Agonia Pereira; Ana de Jesus Mendes; Valter Martins Vairinhos
 Repository version: 2.0.0
 ==============================================================================
 Reading local dataset: Questionario_Limpo.xlsx
