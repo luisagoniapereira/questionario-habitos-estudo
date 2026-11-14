@@ -2,7 +2,7 @@
 ## Version 2.0.0
 
 **Article:** *Student Engagement in Technology-Mediated Hybrid Higher Education: An Exploratory Institutional Case Study*  
-**Authors:** Luís Agonia Pereira; Valter Martins Vairinhos; Ana de Jesus Mendes  
+**Authors:** Luís Agonia Pereira; Ana de Jesus Mendes; Valter Martins Vairinhos  
 **Analytical sample:** 69 undergraduate students  
 **Analysis date:** 14 November 2026  
 **Language:** British English
