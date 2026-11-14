@@ -10,8 +10,8 @@ An Exploratory Institutional Case Study"
 
 Authors (publication order):
 1. Luís Agonia Pereira
-2. Valter Martins Vairinhos
-3. Ana de Jesus Mendes
+2. Ana de Jesus Mendes
+3. Valter Martins Vairinhos
 
 Repository version: 2.0.0
 Analytical sample: n = 69
