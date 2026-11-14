@@ -1571,7 +1571,7 @@ def main() -> None:
     """Run the complete reproducible workflow in manuscript order."""
     print("=" * 78)
     print("ICITS'27 PAPER 426 - REPRODUCIBILITY ANALYSIS")
-    print("Authors: Luís Agonia Pereira; Valter Martins Vairinhos; Ana de Jesus Mendes")
+    print("Authors: Luís Agonia Pereira; Ana de Jesus Mendes; Valter Martins Vairinhos")
     print("Repository version: 2.0.0")
     print("=" * 78)
     header, data = load_data()
