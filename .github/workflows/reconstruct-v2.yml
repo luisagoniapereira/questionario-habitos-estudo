@@ -1,6 +1,7 @@
 name: Reconstruct v2.0.0 files
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - update-v2.0.0-reproducibility
