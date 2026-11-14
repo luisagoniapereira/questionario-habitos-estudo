@@ -1,0 +1,296 @@
+==============================================================================
+ICITS'27 PAPER 426 - REPRODUCIBILITY ANALYSIS
+Authors: Luís Agonia Pereira; Valter Martins Vairinhos; Ana de Jesus Mendes
+Repository version: 2.0.0
+==============================================================================
+Reading local dataset: Questionario_Limpo.xlsx
+Dataset loaded: 69 valid analytical responses, 67 columns.
+
+==============================================================================
+RELIABILITY OF THE BEHAVIOURAL AGGREGATES (KR-20)
+==============================================================================
+  Well-being (6 items):               KR-20 = 0.721
+  Time management (3 items):          KR-20 = 0.429
+  Online academic strategies (5):     KR-20 = 0.477
+  Interpretation: time management and online strategies remain exploratory
+  behavioural aggregates because their internal consistency is limited.
+
+==============================================================================
+DESCRIPTIVE STATISTICS FOR THE 0-1 AGGREGATES
+==============================================================================
+  Well-being                     M=0.45 SD=0.30 Min=0.00 Q1=0.17 Median=0.33 Q3=0.67 Max=1.00
+  Time management                M=0.74 SD=0.29 Min=0.00 Q1=0.67 Median=0.67 Q3=1.00 Max=1.00
+  Online academic strategies     M=0.49 SD=0.26 Min=0.00 Q1=0.40 Median=0.40 Q3=0.60 Max=1.00
+
+  [Figure saved to figures/figure_index_boxplots.png]
+
+==============================================================================
+SPEARMAN CORRELATIONS
+==============================================================================
+  Weekly study hours       x Well-being               rho=+0.21 (p=0.082)
+  Weekly study hours       x Time management          rho=+0.33** (p=0.006)
+  Weekly study hours       x Online strategies        rho=-0.04 (p=0.759)
+  Well-being               x Time management          rho=+0.24* (p=0.047)
+  Well-being               x Online strategies        rho=-0.12 (p=0.335)
+  Time management          x Online strategies        rho=+0.30* (p=0.014)
+  [Figure saved to figures/figure_spearman_correlations.png]
+
+==============================================================================
+ROBUST REGRESSION OF WEEKLY STUDY HOURS
+==============================================================================
+
+  All participants (n = 69):
+    Predictor                             B       SE         p   95% CI
+    Intercept                          4.05     3.46     0.242   [ -2.73,  10.82]
+    Well-being                         6.95     3.85     0.071   [ -0.59,  14.50]
+    Time management                   10.65     4.19     0.011   [  2.44,  18.85]
+    Online academic strategies        -4.91     4.55     0.281   [-13.83,   4.02]
+    Auxiliary OLS R-squared = 0.057
+
+  Two atypical cases set aside (n = 67):
+    Predictor                             B       SE         p   95% CI
+    Intercept                          1.39     3.50     0.692   [ -5.48,   8.26]
+    Well-being                         9.57     3.84     0.013   [  2.05,  17.10]
+    Time management                   10.44     4.03     0.010   [  2.55,  18.33]
+    Online academic strategies        -2.36     4.46     0.596   [-11.11,   6.38]
+    Auxiliary OLS R-squared = 0.244
+
+==============================================================================
+GENDER DIFFERENCES
+==============================================================================
+  Male n = 31; female n = 38
+  Convention: positive Cliff's delta denotes higher values among male students.
+  Online academic strategies     U=362.5 p=0.005 delta=+0.38 (medium)
+  Time management                U=579.5 p=0.906 delta=-0.02 (negligible)
+  Well-being                     U=578.5 p=0.903 delta=-0.02 (negligible)
+
+  [Figure saved to figures/figure_gender_differences.png]
+
+==============================================================================
+ORIGINAL EXPLORATORY CLUSTERING
+==============================================================================
+  Silhouette, k=2, n=67:             0.2607
+  Silhouette, k=3, n=69:             0.2593
+  Calinski-Harabasz, k=2:            26.6
+  K-means versus Ward agreement:     ARI = 0.7196
+  Bootstrap stability, k=2:          mean ARI = 0.7511 (SD = 0.290)
+  Bootstrap stability, k=3:          mean ARI = 0.4884 (SD = 0.243)
+
+  Group characteristics on the original scales:
+                    n  weekly_hours  well_being  time_management  online_strategies
+group                                                                              
+Higher study load  26         21.81        0.65             0.96               0.54
+Lower study load   41          7.44        0.35             0.61               0.48
+
+  Atypical cases (n=2): weekly hours=72.50; well-being=0.00; time management=0.50; online strategies=0.20
+
+  [Figures saved to figures/figure_clustering_elbow.png and figures/figure_clustering_pca.png]
+
+==============================================================================
+LEXICAL ANALYSIS BY A PRIORI QUESTIONNAIRE CATEGORY
+==============================================================================
+  Corpus: 670 non-empty responses across 5 categories.
+category
+Self-assessment and strategies    197
+Reflection and final comments     141
+Motivations and views             134
+Challenges and resources          131
+Interaction and support            67
+
+  Fifteen most frequent terms in the corpus:
+    estudo                 49
+    tempo                  37
+    biblioteca             33
+    estudar                28
+    aulas                  27
+    online                 25
+    área                   22
+    presencial             21
+    melhor                 18
+    horas                  18
+    professores            17
+    escrever               16
+    académico              15
+    boa                    14
+    bom                    14
+
+  [Word cloud saved to figures/figure_word_cloud.png]
+
+  Most characteristic terms by category
+  (descriptive G-squared ranking against the remainder of the corpus; minimum frequency = 4)
+    Motivations and views:
+      área (f=20, G2=40.8), gosto (f=9, G2=18.0), ajudar (f=6, G2=15.9), curso (f=10, G2=14.3), boa (f=10, G2=12.2)
+    Self-assessment and strategies:
+      escrever (f=16, G2=48.0), ler (f=12, G2=36.0), review (f=7, G2=21.0), notas (f=10, G2=17.5), testes (f=5, G2=15.0)
+    Challenges and resources:
+      biblioteca (f=31, G2=79.3), salas (f=8, G2=24.1), espaços (f=8, G2=24.1), moodle (f=9, G2=21.1), aulas (f=17, G2=20.6)
+    Interaction and support:
+      presencial (f=20, G2=102.1), email (f=12, G2=66.0), online (f=11, G2=28.1), teachers (f=5, G2=27.5), colegas (f=7, G2=24.6)
+    Reflection and final comments:
+      hábitos (f=14, G2=41.7), tempo (f=24, G2=30.1), horas (f=15, G2=30.0), relação (f=10, G2=29.8), existe (f=10, G2=23.6)
+
+  [Lexical table saved to figures/table_characteristic_terms_by_category.csv]
+
+==============================================================================
+REPRODUCIBILITY ANALYSIS A: ITEMS, CODING AND MISSING RESPONSES
+==============================================================================
+  Records in the cleaned analysis file: 70
+  Excluded because consent or valid weekly hours were absent: 1
+  Final analytical sample: 69
+
+  Well-being:
+    Column 39: Adequate sleep
+      Wording: Do you ensure adequate sleep quality to maintain focus and concentration in academic activities, both face-to-face and online?
+      Coding: Yes=1, No=0; missing=0; source Yes n=40; source No n=29
+    Column 40: Balanced diet
+      Wording: In your view, do you follow a balanced diet?
+      Coding: Yes=1, No=0; missing=0; source Yes n=49; source No n=20
+    Column 41: Regular exercise or a hobby
+      Wording: Do you regularly exercise or pursue a hobby to support your physical well-being?
+      Coding: Yes=1, No=0; missing=0; source Yes n=38; source No n=31
+    Column 42: Stress and emotional-balance management
+      Wording: Do you manage stress levels and emotional balance to maintain a healthy mental state?
+      Coding: Yes=1, No=0; missing=0; source Yes n=33; source No n=36
+    Column 43: Physical fatigue
+      Wording: Do you usually experience physical fatigue?
+      Coding: Source Yes=0, source No=1 (reverse-coded); missing=0; source Yes n=52; source No n=17
+    Column 44: Psychological fatigue
+      Wording: Do you usually experience psychological fatigue?
+      Coding: Source Yes=0, source No=1 (reverse-coded); missing=0; source Yes n=58; source No n=11
+    Complete cases for KR-20: 69/69
+    Composite score: mean of the coded items on the 0-1 scale.
+    All analytical participants answered every component item.
+    No imputation or partial composite scoring was required.
+
+  Time management:
+    Column 28: Use of study schedules or routines
+      Wording: Do you create study schedules or routines and meet your goals for both face-to-face and online activities, including classes?
+      Coding: Yes=1, No=0; missing=0; source Yes n=41; source No n=28
+    Column 29: Prioritisation of academic tasks
+      Wording: Are you able to prioritise academic tasks efficiently, both face-to-face and online?
+      Coding: Yes=1, No=0; missing=0; source Yes n=59; source No n=10
+    Column 30: Management of intervals and breaks
+      Wording: Do you use time efficiently by managing intervals and breaks appropriately and adapting to different teaching modes?
+      Coding: Yes=1, No=0; missing=0; source Yes n=53; source No n=16
+    Complete cases for KR-20: 69/69
+    Composite score: mean of the coded items on the 0-1 scale.
+    All analytical participants answered every component item.
+    No imputation or partial composite scoring was required.
+
+  Online academic strategies (multiple-response item, column 32):
+    Wording: Which study practices do you use most in online contexts? Select all that apply.
+    Five-option digital core:
+      - Mind maps or diagrams: selected by n=19
+      - Studying with peers in virtual learning communities: selected by n=22
+      - Exercise completion: selected by n=30
+      - Text summaries: selected by n=52
+      - Online resources such as videos, manuals and forums: selected by n=47
+    Missing responses to column 32: 0/69
+    Composite score: number of digital options selected divided by five.
+    No imputation or partial scoring was required.
+
+==============================================================================
+REPRODUCIBILITY ANALYSIS B: ITEM-LEVEL RESULTS
+==============================================================================
+
+  Time-management items and weekly study hours:
+    Study schedules or routines (column 28; n=69; proportion Yes=0.594): rho=+0.234, 95% CI [+0.002, +0.458], p=0.0531, Holm-adjusted p=0.1594
+    Prioritisation of academic tasks (column 29; n=69; proportion Yes=0.855): rho=+0.222, 95% CI [+0.029, +0.397], p=0.0664, Holm-adjusted p=0.1594
+    Management of intervals and breaks (column 30; n=69; proportion Yes=0.768): rho=+0.152, 95% CI [-0.099, +0.388], p=0.2110, Holm-adjusted p=0.2110
+
+  Online academic strategy items by gender:
+    Mind maps or diagrams
+      male=0.226 (n=31), female=0.316 (n=38); U=536.0, p=0.4131, Holm-adjusted p=0.8262, delta=-0.090, 95% CI [-0.298, +0.124]
+    Studying with peers in virtual learning communities
+      male=0.516 (n=31), female=0.158 (n=38); U=378.0, p=0.0017, Holm-adjusted p=0.0083, delta=+0.358, 95% CI [+0.144, +0.566]
+    Exercise completion
+      male=0.613 (n=31), female=0.289 (n=38); U=398.5, p=0.0076, Holm-adjusted p=0.0304, delta=+0.323, 95% CI [+0.095, +0.537]
+    Text summaries
+      male=0.742 (n=31), female=0.763 (n=38); U=576.5, p=0.8462, Holm-adjusted p=0.8462, delta=-0.021, 95% CI [-0.229, +0.181]
+    Online resources such as videos, manuals and forums
+      male=0.806 (n=31), female=0.579 (n=38); U=455.0, p=0.0460, Holm-adjusted p=0.1381, delta=+0.228, 95% CI [+0.014, +0.430]
+    Convention: positive delta denotes higher values among male students.
+    Holm-adjusted p-values control multiplicity within each item family.
+
+==============================================================================
+REPRODUCIBILITY ANALYSIS C: PRINCIPAL CORRELATIONS WITH 95% CIs
+==============================================================================
+  Weekly hours x time management                 n=69 rho=+0.326 95% CI [+0.089, +0.535] p=0.0063
+  Weekly hours x well-being                      n=69 rho=+0.211 95% CI [-0.045, +0.450] p=0.0825
+  Weekly hours x online strategies               n=69 rho=-0.038 95% CI [-0.288, +0.217] p=0.7587
+  Time management x well-being                   n=69 rho=+0.240 95% CI [+0.008, +0.451] p=0.0466
+  Time management x online strategies            n=69 rho=+0.295 95% CI [+0.062, +0.513] p=0.0138
+
+==============================================================================
+REPRODUCIBILITY ANALYSIS D: CLIFF'S DELTA WITH 95% CIs
+==============================================================================
+  Online academic strategies     U=362.5 p=0.0051 delta=+0.385 95% CI [+0.133, +0.621]
+  Time management                U=579.5 p=0.9065 delta=-0.016 95% CI [-0.274, +0.239]
+  Well-being                     U=578.5 p=0.9026 delta=-0.018 95% CI [-0.285, +0.256]
+  Convention: positive delta denotes higher values among male students.
+
+==============================================================================
+REPRODUCIBILITY ANALYSIS E: PROGRAMME-COMPOSITION SENSITIVITY
+==============================================================================
+  Programme column identified: 9
+  Grouped distribution, matching the manuscript:
+programme
+Management            30
+Nursing               18
+Physiotherapy          8
+Engineering            4
+Osteopathy             4
+Nutrition Sciences     3
+Other                  2
+
+  Parsimonious robust model: Management versus other programmes plus gender:
+    Time management          B=+10.235, 95% CI [+1.678, +18.792], p=0.0191
+    Well-being               B=+6.602, 95% CI [-1.137, +14.341], p=0.0945
+    Online strategies        B=-5.669, 95% CI [-15.279, +3.940], p=0.2475
+    Management programme     B=+1.855, 95% CI [-3.020, +6.729], p=0.4558
+    Male gender              B=+0.427, 95% CI [-4.507, +5.361], p=0.8653
+
+  Parsimonious robust model with the two atypical cases set aside:
+    Time management          B=+9.953, 95% CI [+1.760, +18.146], p=0.0173
+    Well-being               B=+9.525, 95% CI [+1.834, +17.215], p=0.0152
+    Online strategies        B=-2.733, 95% CI [-12.130, +6.664], p=0.5686
+    Management programme     B=+1.682, 95% CI [-3.014, +6.378], p=0.4827
+    Male gender              B=-0.064, 95% CI [-4.790, +4.662], p=0.9788
+
+  Robust model adjusted for all programme categories (Management is the reference category):
+    Time management          B=+12.406, 95% CI [+3.965, +20.847], p=0.0040
+    Well-being               B=+6.572, 95% CI [-0.761, +13.905], p=0.0790
+    Online strategies        B=-7.933, 95% CI [-16.803, +0.938], p=0.0796
+
+  Robust model adjusted for all programme categories, atypical cases set aside (Management is the reference category):
+    Time management          B=+13.248, 95% CI [+5.256, +21.240], p=0.0012
+    Well-being               B=+9.058, 95% CI [+1.869, +16.246], p=0.0135
+    Online strategies        B=-5.652, 95% CI [-14.203, +2.899], p=0.1952
+  These are sensitivity analyses, not confirmatory adjusted models, because n=69.
+
+==============================================================================
+REPRODUCIBILITY ANALYSIS F: CLUSTERING WITHOUT WEEKLY STUDY HOURS
+==============================================================================
+  Without weekly hours, k=2: silhouette=0.2646; bootstrap ARI=0.3717 (SD=0.301); Ward ARI=0.1756
+  Without weekly hours, k=3: silhouette=0.3048; bootstrap ARI=0.5935 (SD=0.257); Ward ARI=0.7087
+  Agreement between the original k=2 partition and the k=2 partition without hours: ARI=0.0503
+
+  Characteristics of the k=2 groups formed without weekly hours:
+                        n  well_being  time_management  online_strategies  external_weekly_hours
+cluster_without_hours                                                                           
+0                      30        0.49             0.57               0.29                  12.23
+1                      37        0.45             0.89               0.68                  13.65
+
+  Exploratory characteristics of the k=3 solution formed without weekly hours:
+                           n  well_being  time_management  online_strategies  external_weekly_hours
+cluster_without_hours_k3                                                                           
+0                         29        0.36             0.87               0.72                  13.10
+1                         22        0.75             0.83               0.34                  16.32
+2                         16        0.28             0.40               0.32                   8.31
+  External weekly hours are descriptive only and were not used to form these clusters.
+  The original lower-/higher-load partition did not reproduce without weekly hours.
+  The k=3 solution had modestly better indicators but remains exploratory.
+
+==============================================================================
+ANALYSIS COMPLETE. Figures and lexical tables are available in ./figures/
+==============================================================================

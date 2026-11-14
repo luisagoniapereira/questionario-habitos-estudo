@@ -1,27 +1,28 @@
 cff-version: 1.2.0
 message: "If you use this dataset or code, please cite it as below."
-title: "Student Engagement in Hybrid Higher Education: An Exploratory Institutional Case Study - Dataset and Reproduction Code"
-version: "1.1.2"
+title: "Student Engagement in Technology-Mediated Hybrid Higher Education: An Exploratory Institutional Case Study - Dataset and Reproduction Code"
+version: "2.0.0"
 doi: "10.5281/zenodo.17127601"
 authors:
-  - family-names: "Mendes"
-    given-names: "Ana"
-    affiliation: "Instituto Politécnico de Setúbal, Setúbal, Portugal"
   - family-names: "Agonia Pereira"
     given-names: "Luís"
     affiliation: "Instituto Politécnico de Setúbal, Setúbal, Portugal"
   - family-names: "Vairinhos"
-    given-names: "Valter"
-    affiliation: "ICLab-ICAA - Intellectual Capital Association, Santarém, Portugal; CINAV - Naval Research Centre - Escola Naval, Almada, Portugal"
+    given-names: "Valter Martins"
+    affiliation: "ICLab - ICAA - Intellectual Capital Association, Santarém, Portugal; CINAV - Naval Research Centre - Escola Naval, Almada, Portugal"
     orcid: "https://orcid.org/0000-0001-9390-5340"
-date-released: "2026-08-08"
+  - family-names: "Mendes"
+    given-names: "Ana de Jesus"
+    affiliation: "Instituto Politécnico de Setúbal, Setúbal, Portugal"
+date-released: "2026-11-14"
 license: "CC-BY-NC-4.0"
 repository-code: "https://github.com/luisagoniapereira/questionario-habitos-estudo"
 keywords:
-  - dataset
-  - reproducible research
-  - student engagement
   - hybrid higher education
+  - student engagement
   - self-regulated learning
   - time management
-  - academic well-being
+  - well-being
+  - online academic strategies
+  - reproducible research
+  - higher education

@@ -1,6 +1,6 @@
-# Versoes das bibliotecas com que os resultados do artigo foram verificados.
-# Resultados gerados e verificados com Python 3.10.12.
-# Instalar com:  pip install -r requirements.txt
+# Exact library versions used to verify the results reported in the article.
+# Results generated and verified with Python 3.10.12.
+# Install with: pip install -r requirements.txt
 pandas==2.3.3
 numpy==2.2.6
 scipy==1.15.3
